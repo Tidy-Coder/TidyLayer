@@ -48,12 +48,15 @@ int createApp(void app(SDL_Window*, SDL_Renderer*), SDL_bool onEvent(SDL_Event))
       break;
     }
   }
+
+  SDL_DestroyRenderer(renderer);
+  SDL_DestroyWindow(window);
   
   SDL_Quit();
   return EXIT_SUCCESS;
 }
 
-void app(SDL_Window window, SDL_Renderer renderer){
+void app(SDL_Window* window, SDL_Renderer* renderer){
   
 }
 
